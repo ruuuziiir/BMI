@@ -46,21 +46,21 @@ class ViewController: UIViewController {
     
     @IBAction func calculateButton(_ sender: Any) {
         
-        let a = (weightSlider.value / (heightSlider.value * heightSlider.value)) * 10000
+        let bmi = (weightSlider.value / (heightSlider.value * heightSlider.value)) * 10000
         
         bmiNumber.text = String(format: "%.2f", a)
         
-        if a < 18.5 {
+        if bmi < 18.5 {
             commentText.text = "Underweight."
         }
         
-        if 18.5 <= a && a < 25 {
+        if 18.5 <= bmi && bmi < 25 {
             commentText.text = "Normal Range."
         }
-        if 25 <= a && a < 30 {
+        if 25 <= bmi && bmi < 30 {
             commentText.text = "Overweight."
         }
-        if a >= 30 {
+        if bmi >= 30 {
             commentText.text = "Obese!"
         }
         
