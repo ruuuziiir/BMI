@@ -48,7 +48,7 @@ class ViewController: UIViewController {
         
         let bmi = (weightSlider.value / (heightSlider.value * heightSlider.value)) * 10000
         
-        bmiNumber.text = String(format: "%.2f", a)
+        bmiNumber.text = String(format: "%.2f", bmi)
         
         if bmi < 18.5 {
             commentText.text = "Underweight."
